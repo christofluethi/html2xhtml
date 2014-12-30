@@ -1830,9 +1830,12 @@ static int err_html_struct(document_t *document, int elm_id)
       actual_element= html;
       head= err_aux_insert_elm(ELMID_HEAD,NULL,0);
       /* establece un nodo para el elemento title */
-      nodo= err_aux_insert_elm(ELMID_TITLE,"****",4);
+      
+      /* Removed: No <title>****</title> title please - will produce empty title now */
+      /* nodo= err_aux_insert_elm(ELMID_TITLE,"****",4); */
       /* cierra title y head */
-      elm_close(nodo);
+      /* elm_close(nodo); */
+
       elm_close(head);
     }
     for (nodo=actual_element; nodo && (nodo!=html); nodo=nodo->padre)
@@ -1864,10 +1867,12 @@ static int err_html_struct(document_t *document, int elm_id)
       /* establece un nodo para el elemento head */
       if (!head) {
 	head= err_aux_insert_elm(ELMID_HEAD,NULL,0);
+
+	/* Removed: No <title>****</title> title please - will produce empty title now */
 	/* establece un nodo para el elemento title */
-	nodo= err_aux_insert_elm(ELMID_TITLE,"****",4);
+	/* nodo= err_aux_insert_elm(ELMID_TITLE,"****",4); */
 	/* cierra title y head */
-	elm_close(nodo);
+	/* elm_close(nodo); */
 	elm_close(head);
       }
       
@@ -1888,10 +1893,12 @@ static int err_html_struct(document_t *document, int elm_id)
       /* establece un nodo para el elemento head */
       if (!head) {
 	head= err_aux_insert_elm(ELMID_HEAD,NULL,0);
+
+	/* Removed: No <title>****</title> title please - will produce empty title now */
 	/* establece un nodo para el elemento title */
-	nodo= err_aux_insert_elm(ELMID_TITLE,"****",4);
+	/* nodo= err_aux_insert_elm(ELMID_TITLE,"****",4); */
 	/* cierra title y head */
-	elm_close(nodo);
+	/* elm_close(nodo); */
 	elm_close(head);
       }
       
